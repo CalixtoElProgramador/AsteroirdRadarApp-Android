@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.MdcTypographyStyles.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/khand_light</item>
+        <item name="android:fontFamily">@font/khand_light</item>
+        <item name="android:textSize">89sp</item>
+        + <item name="android:letterSpacing">-0.01685393258</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/khand_light</item>
+        <item name="android:fontFamily">@font/khand_light</item>
+        <item name="android:textSize">56sp</item>
+        + <item name="android:letterSpacing">-0.008928571</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/khand</item>
+        <item name="android:fontFamily">@font/khand</item>
+        <item name="android:textSize">45sp</item>
+        + <item name="android:letterSpacing">0.0</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/khand</item>
+        <item name="android:fontFamily">@font/khand</item>
+        <item name="android:textSize">32sp</item>
+        + <item name="android:letterSpacing">0.0078125</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/khand</item>
+        <item name="android:fontFamily">@font/khand</item>
+        <item name="android:textSize">22sp</item>
+        + <item name="android:letterSpacing">0.0</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/khand_medium</item>
+        <item name="android:fontFamily">@font/khand</item>
+        <item name="android:textSize">19sp</item>
+        + <item name="android:letterSpacing">0.007894736</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/khand</item>
+        <item name="android:fontFamily">@font/khand</item>
+        <item name="android:textSize">15sp</item>
+        + <item name="android:letterSpacing">0.01</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/khand</item>
+        <item name="android:fontFamily">@font/khand</item>
+        <item name="android:textSize">13sp</item>
+        + <item name="android:letterSpacing">0.007692307</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">16sp</item>
+        + <item name="android:letterSpacing">0.03125</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+        + <item name="android:letterSpacing">0.01785714286</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+        + <item name="android:letterSpacing">0.08928571429</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">12sp</item>
+        + <item name="android:letterSpacing">0.0333333333333</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">10sp</item>
+        + <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <style name="TextAppearance.MdcTypographyStyles.CollapsingToolbar.Expanded" parent="TextAppearance.MdcTypographyStyles.Headline4">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="TextAppearance.MdcTypographyStyles.CollapsingToolbar.Collapsed" parent="TextAppearance.MdcTypographyStyles.Headline5">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+</resources>

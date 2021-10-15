@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_900">#1B150E</color>
+    <color name="primary_800">#3B352E</color>
+    <color name="primary_700">#59534C</color>
+    <color name="primary_600">#6D665F</color>
+    <color name="primary_500">#958E86</color>
+    <color name="primary_400">#B6AEA6</color>
+    <color name="primary_300">#DAD3CA</color>
+    <color name="primary_200">#ECE4DB</color>
+    <color name="primary_100">#F6EFE6</color>
+    <color name="primary_50">#FFF7EE</color>
+
+    <color name="secondary_900">#19353D</color>
+    <color name="secondary_800">#2A4A54</color>
+    <color name="secondary_700">#375D68</color>
+    <color name="secondary_600">#45727E</color>
+    <color name="secondary_500">#50818F</color>
+    <color name="secondary_400">#6A94A1</color>
+    <color name="secondary_300">#83A8B3</color>
+    <color name="secondary_200">#A4C1CA</color>
+    <color name="secondary_100">#C3DBE1</color>
+    <color name="secondary_50">#E2F1F8</color>
+
+    <color name="accent_1_900">#571920</color>
+    <color name="accent_1_800">#692729</color>
+    <color name="accent_1_700">#793430</color>
+    <color name="accent_1_600">#8A403A</color>
+    <color name="accent_1_500">#974940</color>
+    <color name="accent_1_400">#AD635A</color>
+    <color name="accent_1_300">#C37E73</color>
+    <color name="accent_1_200">#E09F97</color>
+    <color name="accent_1_100">#FCC1B7</color>
+    <color name="accent_1_50">#FFE1D2</color>
+
+    <color name="accent_2_900">#8E2A00</color>
+    <color name="accent_2_800">#974200</color>
+    <color name="accent_2_700">#9D5100</color>
+    <color name="accent_2_600">#A25D00</color>
+    <color name="accent_2_500">#A46600</color>
+    <color name="accent_2_400">#AE7A00</color>
+    <color name="accent_2_300">#B98E35</color>
+    <color name="accent_2_200">#CAAD74</color>
+    <color name="accent_2_100">#DDCEAF</color>
+    <color name="accent_2_50">#F1EBDF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+</resources>

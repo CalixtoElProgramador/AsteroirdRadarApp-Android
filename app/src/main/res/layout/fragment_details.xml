@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.listocalixto.nasa20.presentation.asteroid.AsteroidViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.details.DetailsFragment">
+
+        <ImageView
+            android:id="@+id/image_asteroid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:scaleType="centerCrop"
+            app:asteroidImage="@{viewModel.asteroidClicked}"
+            app:imageDetailsDescription="@{viewModel.asteroidClicked}"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/image_asteroid_hazardous" />
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:contentDescription="@string/return_to_previous_screen"
+            android:onClick="@{() -> viewModel.onBackArrowClick()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@+id/image_asteroid">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.87"
+                android:text="@string/close_approach_date"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                app:layout_constraintTop_toBottomOf="@+id/image_asteroid" />
+
+            <TextView
+                android:id="@+id/asteroidCloseApproachDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.60"
+                android:text="@{viewModel.asteroidClicked.closeApproachDate}"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:text="2020-02-08" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.87"
+                android:text="@string/absolute_magnitude"
+                android:textAppearance="?attr/textAppearanceHeadline5" />
+
+            <TextView
+                android:id="@+id/asteroidAbsoluteMagnitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.60"
+                app:setValuesWithUnits="@{viewModel.asteroidClicked}"
+                android:textAppearance="?attr/textAppearanceBody1"
+                tools:text="19.900000 au" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/icon_help"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:contentDescription="@string/button_help_description"
+            android:onClick="@{() -> viewModel.onHelpDialogClick()}"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_help"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:tint="?attr/colorAccent1" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.87"
+                android:text="@string/estimated_diameter"
+                android:textAppearance="?attr/textAppearanceHeadline5" />
+
+            <TextView
+                android:id="@+id/asteroidEstimatedDiameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.60"
+                app:setValuesWithUnits="@{viewModel.asteroidClicked}"
+                android:textAppearance="?attr/textAppearanceBody1"
+                tools:text="0.622358 km" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.87"
+                android:text="@string/relative_velocity"
+                android:textAppearance="?attr/textAppearanceHeadline5" />
+
+            <TextView
+                android:id="@+id/asteroidRelativeVelocity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.60"
+                app:setValuesWithUnits="@{viewModel.asteroidClicked}"
+                android:textAppearance="?attr/textAppearanceBody1"
+                tools:text="15.515735 km/s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            tools:layout_editor_absoluteX="-21dp">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.87"
+                android:text="@string/distance_from_earth"
+                android:textAppearance="?attr/textAppearanceHeadline5" />
+
+            <TextView
+                android:id="@+id/asteroidDistanceFromEarth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.60"
+                app:setValuesWithUnits="@{viewModel.asteroidClicked}"
+                android:textAppearance="?attr/textAppearanceBody1"
+                tools:text="0.445338 au" />
+
+        </LinearLayout>
+
+
+        <!---->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

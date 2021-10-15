@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NASA 2.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toolbar_title">NASA 2.0</string>
+    <string name="close_approach_date">Fecha de aproximación</string>
+    <string name="absolute_magnitude">Magnitud absoluta</string>
+    <string name="estimated_diameter">Diámetro estimado</string>
+    <string name="relative_velocity">Velocidad relativa</string>
+    <string name="distance_from_earth">Distancia de la tierra</string>
+    <string name="accept">Aceptar</string>
+    <string name="supporting_text">La unidad astronómica (au) es una unidad de longitud, la distancia de la Tierra al Sol y equivale a unos 150 millones de kilómetros (noventa y tres millones de millas)</string>
+    <string name="appbar_layout_description_item_null">Imagen del día, cargando.</string>
+    <string name="appbar_layout_description_item_upload">El título de la imagen del día es:</string>
+    <string name="image_of_the_day_description">Imagen del día de la NASA</string>
+    <string name="collapsing_toolbar_title">Imagen del día</string>
+    <string name="card_asteroid_description_asteroid_name_is">El nombre del asteroide es:</string>
+    <string name="card_asteroid_description_approach_date_is">Su fecha de aproximación es el:</string>
+    <string name="card_asteroid_description_is_hazardous">Está clasificado como peligroso.</string>
+    <string name="card_asteroid_description_non_hazardous">Está clasificado como no peligroso. Carita feliz.</string>
+    <string name="button_help_description">¿Qué es la unidad astronómica? (au)</string>
+    <string name="image_asteroid_details_description_is_hazardous">Imagen de un peligroso asteroide en llamas ardientes a punto de destruir la civilización.</string>
+    <string name="image_asteroid_details_description_non_hazardous">Imagen de un asteroide no peligroso.</string>
+    <string name="return_to_previous_screen">Regresar a la anterior pantalla</string>
+</resources>

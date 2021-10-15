@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="asteroidViewModel"
+            type="com.listocalixto.nasa20.presentation.asteroid.AsteroidViewModel" />
+
+        <variable
+            name="apodViewModel"
+            type="com.listocalixto.nasa20.presentation.apod.ApodViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.main.MainFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_260sdp"
+            android:fitsSystemWindows="true"
+            app:appBarDescription="@{apodViewModel.pictureOfDay}"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.MdcTypographyStyles.CollapsingToolbar.Collapsed"
+                app:contentScrim="?attr/colorSecondary"
+                app:expandedTitleTextAppearance="@style/TextAppearance.MdcTypographyStyles.CollapsingToolbar.Expanded"
+                app:expandedTitleTextColor="@android:color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:statusBarScrim="?attr/colorSecondaryVariant"
+                app:title="@string/app_name">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/image_of_the_day_description"
+                    app:imageUrl="@{apodViewModel.pictureOfDay}"
+                    tools:src="@drawable/image_apod_example" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/gradient"
+                    android:fitsSystemWindows="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_56sdp"
+                    android:alpha="0.87"
+                    android:text="@string/collapsing_toolbar_title"
+                    android:textAppearance="?attr/textAppearanceHeadline2"
+                    android:textColor="?attr/colorOnPrimary" />
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    android:elevation="0dp"
+                    android:fitsSystemWindows="true"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    app:title="@string/toolbar_title" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/_24sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            app:asteroidList="@{asteroidViewModel.asteroids}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:reverseLayout="false"
+            tools:ignore="RtlSymmetry" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/recyclerView"
+            app:layout_anchorGravity="center"
+            app:goneIfNotNull="@{asteroidViewModel.asteroids}"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

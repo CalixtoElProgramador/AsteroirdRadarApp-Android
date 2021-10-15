@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">NASA 2.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toolbar_title">NASA 2.0</string>
+    <string name="close_approach_date">Close approach date</string>
+    <string name="absolute_magnitude">Absolute magnitude</string>
+    <string name="estimated_diameter">Estimated diameter</string>
+    <string name="relative_velocity">Relative velocity</string>
+    <string name="distance_from_earth">Distance from earth</string>
+    <string name="accept">Accept</string>
+    <string name="supporting_text">The astronomical unit (au) is a unit of length, roughly the distance from Earth to the Sun and equal to about 150 million kilometres (93 million miles)</string>
+    <string name="appbar_layout_description_item_null">Image of the day, loading.</string>
+    <string name="appbar_layout_description_item_upload">The title of the image of the day is:</string>
+    <string name="image_of_the_day_description">NASA Image of the Day</string>
+    <string name="collapsing_toolbar_title">Image of the day</string>
+    <string name="card_asteroid_description_asteroid_name_is">The asteroid\'s name is:</string>
+    <string name="card_asteroid_description_approach_date_is">Its approach date is:</string>
+    <string name="card_asteroid_description_is_hazardous">It is classified as dangerous.</string>
+    <string name="card_asteroid_description_non_hazardous">It is classified as non-hazardous. Happy face.</string>
+    <string name="button_help_description">What is the astronomical unit? (au)</string>
+    <string name="image_asteroid_details_description_is_hazardous">Image of a dangerous asteroid in fiery flames about to destroy civilization.</string>
+    <string name="image_asteroid_details_description_non_hazardous">Image of a non-hazardous asteroid.</string>
+    <string name="return_to_previous_screen">Return to previous screen</string>
+</resources>

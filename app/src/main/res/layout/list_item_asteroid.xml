@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="asteroid"
+            type="com.listocalixto.nasa20.data.model.Asteroid" />
+
+        <variable
+            name="clickListener"
+            type="com.listocalixto.nasa20.ui.main.adapter.OnClickListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.App.CardView.Asteroid"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:itemDescription="@{asteroid}"
+        android:onClick="@{() -> clickListener.onClick(asteroid)}"
+        app:cardPreventCornerOverlap="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_asteroidContent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_40sdp"
+                app:layout_constraintEnd_toStartOf="@id/asteroidImage"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/asteroidTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.87"
+                    android:maxWidth="@dimen/_400sdp"
+                    android:maxLines="2"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="?colorOnSurface"
+                    app:asteroidTitle="@{asteroid}"
+                    tools:text="68347 (2001 KB67)" />
+
+                <TextView
+                    android:id="@+id/asteroidSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.60"
+                    android:textColor="?colorOnSurface"
+                    app:asteroidSubtitle="@{asteroid}"
+                    tools:text="2020-02-08" />
+
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/asteroidImage"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:asteroidImage="@{asteroid}"
+                app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"
+                tools:src="@drawable/image_apod_example" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
